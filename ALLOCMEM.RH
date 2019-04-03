@@ -1,0 +1,4 @@
+// Errors
+// ------
+   #define ERROR_TOO_LARGE 1024
+

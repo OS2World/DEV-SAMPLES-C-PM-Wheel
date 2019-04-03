@@ -1,0 +1,8 @@
+TellUser.OBJ : TellUser.C TellUser.H
+ cl /Alfw /c /DDLL /FPa /Gs2w /Od /W3 /Zelpi TellUser.C
+
+TELLUSER.DLL : telluser.def TellUser.OBJ
+ link /M /NOD /NOI /CO TELLUSER.OBJ+CRTDLL.OBJ, TELLUSER.DLL, telluser.MAP, crtlib os2, telluser.def;
+ implib TELLUSER.LIB telluser.def
+
+

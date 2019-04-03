@@ -1,0 +1,22 @@
+;MODULES TellUser.C
+;OPTIONS FPAlt Large PM Multithread Codeview
+
+LIBRARY TELLUSER
+
+DESCRIPTION 'TellUser DLL - The San Francisco Canyon Company Incorporated'
+
+PROTMODE
+EXETYPE OS2
+
+STUB 'os2stub.exe'
+
+CODE LOADONCALL
+
+DATA SHARED
+
+HEAPSIZE 1024
+
+EXPORTS
+  TELLUSERINITIALIZE   @1
+  _TellUser            @2
+

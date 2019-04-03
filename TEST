@@ -1,0 +1,11 @@
+TEST.OBJ : TEST.C TEST.H WHEEL.H
+ cl /AL /c /DDLL /FPi /Gs2w /Od /W3 /Zelpi TEST.C
+
+TEST.RES : TEST.RC TEST.H TEST.ICO
+ rc -r TEST.RC
+
+TEST.EXE : test.def TEST.OBJ TEST.RES
+ link /M /NOD /NOI /CO TEST.OBJ+CRTEXE.OBJ, TEST.EXE, TEST.MAP, WHEEL crtlib os2, test.def;
+ rc TEST.RES TEST.EXE
+
+

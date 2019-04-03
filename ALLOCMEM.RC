@@ -1,0 +1,13 @@
+// Includes
+// --------
+   #include <os2.h>
+
+   #include "AllocMem.RH"
+
+
+// String Constants
+// ----------------
+   STRINGTABLE
+     {ERROR_TOO_LARGE, "Allocation request of %ld bytes is greater than the current implementation maximum of 65535."
+     }
+

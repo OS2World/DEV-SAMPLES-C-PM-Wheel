@@ -1,0 +1,12 @@
+AllocMem.OBJ : AllocMem.C AllocMem.H AllocMem.RH TellUser.H
+ cl /Alfw /c /DDLL /FPa /Gs2w /Od /W3 /Zelpi AllocMem.C
+
+AllocMem.RES : AllocMem.RC AllocMem.RH
+ rc -r AllocMem.RC
+
+ALLOCMEM.DLL : allocmem.def AllocMem.OBJ AllocMem.RES
+ link /M /NOD /NOI /CO ALLOCMEM.OBJ+CRTDLL.OBJ, ALLOCMEM.DLL, allocmem.MAP, telluser crtlib os2, allocmem.def;
+ rc AllocMem.RES ALLOCMEM.DLL
+ implib ALLOCMEM.LIB allocmem.def
+
+

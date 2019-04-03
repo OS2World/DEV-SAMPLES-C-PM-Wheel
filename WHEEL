@@ -1,0 +1,8 @@
+WHEEL.OBJ : WHEEL.C Wheel.H AllocMem.H
+ cl /Alfw /c /DDLL /FPa /Gs2w /Od /W3 /Zelpi WHEEL.C
+
+WHEEL.DLL : wheel.def WHEEL.OBJ
+ link /M /NOD /NOI /CO WHEEL.OBJ+CRTDLL.OBJ, WHEEL.DLL, WHEEL.MAP, ALLOCMEM crtlib os2, wheel.def;
+ implib WHEEL.LIB wheel.def
+
+

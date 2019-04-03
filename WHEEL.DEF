@@ -1,0 +1,25 @@
+;MODULES WHEEL.C
+;OPTIONS FPAlt Large PM Multithread Codeview
+;INCLUDE ..\allocmem
+;LIB ..\allocmem\allocmem
+
+LIBRARY WHEEL
+
+DESCRIPTION 'Color Wheel DLL - The San Francisco Canyon Company Incorporated'
+
+PROTMODE
+EXETYPE OS2
+
+STUB 'os2stub.exe'
+
+CODE LOADONCALL
+
+DATA SHARED
+
+HEAPSIZE 1024
+
+EXPORTS
+  COLORWHEELINITIALIZE        @1
+  COLORWHEELWNDPROC           @2
+  COLORWHEELSAMPLEWNDPROC     @3
+
